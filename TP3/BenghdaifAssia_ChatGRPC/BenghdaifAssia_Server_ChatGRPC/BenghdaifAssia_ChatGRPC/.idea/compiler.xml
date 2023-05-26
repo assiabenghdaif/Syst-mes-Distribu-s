@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BenghdaifAssia_ChatGRPC" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Partie 1" target="17" />
+      <module name="Partie1" target="17" />
+      <module name="Premiere partie" target="17" />
+      <module name="PremierePartie" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

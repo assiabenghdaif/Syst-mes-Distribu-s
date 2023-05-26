@@ -1,0 +1,31 @@
+syntax = "proto3";
+option java_package="fsm.miaad.stubs";
+
+service BankService{
+  //unary model
+  rpc convert_unary(ConvertCurrencyRequest) returns(ConvertCurrencyResponse);
+
+  //server streaming model
+  rpc convert_Server_Sreaming(ConvertCurrencyRequest) returns(stream ConvertCurrencyResponse);
+
+  //client streaming model
+  rpc convert_Client_Streaming(stream ConvertCurrencyRequest) returns(ConvertCurrencyResponse);
+
+  //BiDirectional Streaming Model
+  rpc convert_BiDirectional_Streaming (stream ConvertCurrencyRequest) returns(stream ConvertCurrencyResponse);
+
+}
+
+message ConvertCurrencyRequest{
+  string currencyFrom=1;
+  string currencyTo=2;
+  double amount=3;
+}
+
+message ConvertCurrencyResponse{
+  string currencyFrom=1;
+  string currencyTo=2;
+  double amount=3;
+  double result=4;
+}
+

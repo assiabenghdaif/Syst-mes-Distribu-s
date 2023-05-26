@@ -1,0 +1,27 @@
+syntax = "proto3";
+option java_package="fsm.miaad.stubs";
+
+service ChatService{
+  //BiDirectional Streaming Model
+  rpc chat_BiDirectional_Streaming (stream ChatCurrencyRequest) returns(stream ChatCurrencyResponse);
+
+  rpc chat_unary (ChatCurrencyRequest) returns(ChatCurrencyResponse);
+
+  rpc chat_Server_Sreaming(ChatCurrencyRequest) returns(stream ChatCurrencyResponse);
+
+  //client streaming model
+  rpc chat_Client_Streaming(stream ChatCurrencyRequest) returns(ChatCurrencyResponse);
+}
+
+message ChatCurrencyRequest{
+  string currencyFrom=1;
+  string currencyTo=2;
+  string message_send=3;
+}
+
+message ChatCurrencyResponse{
+  string currencyFrom=1;
+  string currencyTo=2;
+  string message_response=3;
+}
+
