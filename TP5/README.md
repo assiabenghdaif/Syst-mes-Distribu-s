@@ -45,7 +45,7 @@
   - http://localhost:8888/BILLING-SERVICE/fullbill/1
   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/e45300df-0119-43d7-b7ee-fed6a50a6b5a)
 
-7. Créer un client Angular qui permet d’afficher une facture
+# 7. Créer un client Angular qui permet d’afficher une facture
 
 
 
