@@ -8,7 +8,8 @@
 5.  [BackEnd](#backend)
     - [Micro Services](#micro-services)
       - [Radar Service](#radar-service)
-        1. mn
+        1. [Dependencies](#dependencies)
+        2. 
         
       - [Immatriculation Service](#immatriculation-service)
       - [Infraction Service](#infraction-service)
@@ -17,7 +18,7 @@
 
  
  
-## Introduction
+## 1.   Introduction
 
     This is a web application built using Spring Boot and Angular.
     We want to create a distributed system based on microservices. 
@@ -25,7 +26,7 @@
     offenses resulting from speed violations detected by automatic radars.
     
     
-## Technologies used
+## 2.   Technologies used
 
  - Spring Boot
  - Spring Cloud (Gateway)
@@ -34,16 +35,29 @@
  - Bootstrap
  - MySql DB
     
-## Technical Architecture
+## 3.   Technical Architecture
 
     Introduction
     Technologies used
     Technical Architecture
     Class Diagram
     
-## Class Diagram
+## 4.   Class Diagram
 
     Introduction
     Technologies used
     Technical Architecture
     Class Diagram
+##  5.  BackEnd
+### Micro Services
+####    Radar Service
+#####   1.  Dependencies
+-   Spring Web
+-   Spring Data JPA
+-   MySQL Driver
+-   Rest Repositories
+-   Lombok
+-   Spring Boot DevTools 
+-   Eureka Discovery Client
+-   Spring Boot Actuator
+
