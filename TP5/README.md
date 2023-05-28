@@ -1,3 +1,9 @@
+# project architecture:
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/75114384-f339-4c19-aade-56cd997b623f)
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/57edbb2e-7793-43ee-8ebb-6bd9698ce52c)
+
+
 # 1. Créer le micro service Customer-service 
   - Tester le Micro service
     - http://localhost:2001/customers
