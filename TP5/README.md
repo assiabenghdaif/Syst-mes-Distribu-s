@@ -46,6 +46,20 @@
   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/e45300df-0119-43d7-b7ee-fed6a50a6b5a)
 
 # 7. Créer un client Angular qui permet d’afficher une facture
+le navbar est compose de 3 liens (routerLink) Products, Customers et  Bill By ID qui affiche une liste deroulante dynamique de toutes les factures dans la base de donnees apres le clique on peut afficher chaque infos d'une facture qui utilise le micro-service Billing-Service et la methode getById de ce service
+  - Products:
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2fe0512c-6a6e-4fa3-81a8-4ebea5932c71)
+
+  - Customers:
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/8272356f-d9db-4752-b941-8c86028c39c5)
+
+  - Bills: 
+  
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4f51073f-567d-4cfe-b2f2-73ed9f6de1e9)
+
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/929965b2-861b-4710-92af-d804a16d83c0)
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2171f6e8-8ec2-4dd9-b124-f1d8ba3362c0)
+
 
 
 
