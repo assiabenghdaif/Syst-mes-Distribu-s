@@ -1,0 +1,36 @@
+<div>
+  <table class="table table-bordered" *ngIf="bill">
+    <thead>
+    <tr>
+      <th colspan="2">Bill infos</th>
+      <th colspan="3">Products Info</th>
+      <th colspan="2">Customer Infos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="fw-bold">
+      <td>Bill ID</td>
+      <td>Bill Date</td>
+
+      <td>Quantity</td>
+      <td>price</td>
+      <td>Product name</td>
+
+      <td>Customer name</td>
+      <td>Customer email</td>
+    </tr>
+
+    <tr >
+      <td>{{bill.id}}</td>
+      <td>{{bill.billDate}}</td>
+
+      <td >{{bill.productItems[0].quatity}}</td>
+      <td>{{bill.productItems[0].price}}</td>
+      <td>{{bill.productItems[0].productName}}</td>
+
+      <td>{{bill.customerName}}</td>
+      <td>{{bill.customerEmail}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

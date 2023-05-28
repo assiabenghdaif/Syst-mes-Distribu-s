@@ -1,0 +1,27 @@
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/customers">Customers</a>
+      </li>
+
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bill By ID</a>
+        <ul class="dropdown-menu">
+          <li *ngFor="let bill of numSequence(countBill);let i = index;">
+            <a class="dropdown-item" (click)="to(i+1)">Bill number {{i+1}}</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet>
+
+</router-outlet>
