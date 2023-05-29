@@ -60,6 +60,7 @@
 ##  5.  BackEnd
 ### Micro Services
 ####    Radar Service
+<a name="dependencies-radar"></a>
 #####   1.  Dependencies
 -   Spring Web
 -   Spring Data JPA
@@ -70,6 +71,7 @@
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 ####    Immatriculation Service
+<a name="dependencies-immatriculation"></a>
 #####   1.  Dependencies
 -   Spring Web
 -   Spring Data JPA
@@ -80,6 +82,7 @@
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 ####    Infraction Service
+<a name="dependencies-infraction"></a>
 #####   1.  Dependencies
 -   Spring Web
 -   Spring Data JPA
@@ -90,10 +93,12 @@
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 ####    Gateway Service
+<a name="dependencies-gateway"></a>
 #####   1.  Dependencies
 -   Gateway
 -   Spring Boot Actuator
 -   Eureka Discovery Client
 ####    Eureka Discovery
+<a name="dependencies-eureka"></a>
 #####   1.  Dependencies
 -   Eureka Server
