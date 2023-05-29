@@ -3,7 +3,6 @@
     <thead>
     <tr>
       <th colspan="2">Bill infos</th>
-      <th colspan="3">Products Info</th>
       <th colspan="2">Customer Infos</th>
     </tr>
     </thead>
@@ -11,10 +10,6 @@
     <tr class="fw-bold">
       <td>Bill ID</td>
       <td>Bill Date</td>
-
-      <td>Quantity</td>
-      <td>price</td>
-      <td>Product name</td>
 
       <td>Customer name</td>
       <td>Customer email</td>
@@ -24,12 +19,32 @@
       <td>{{bill.id}}</td>
       <td>{{bill.billDate}}</td>
 
-      <td >{{bill.productItems[0].quatity}}</td>
-      <td>{{bill.productItems[0].price}}</td>
-      <td>{{bill.productItems[0].productName}}</td>
-
       <td>{{bill.customerName}}</td>
       <td>{{bill.customerEmail}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  <table class="table table-bordered" *ngIf="bill">
+    <thead>
+    <tr>
+      <th colspan="3">Products Info</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="fw-bold">
+
+      <td>Quantity</td>
+      <td>price</td>
+      <td>Product name</td>
+    </tr>
+
+    <tr *ngFor="let b of bill.productItems">
+
+      <td >{{b.quatity}}</td>
+      <td>{{b.price}}</td>
+      <td>{{b.productName}}</td>
+
     </tr>
     </tbody>
   </table>
