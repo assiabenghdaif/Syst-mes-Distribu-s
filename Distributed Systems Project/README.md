@@ -12,7 +12,16 @@
         2. 
         
       - [Immatriculation Service](#immatriculation-service)
+           1.  [Dependencies](#dependencies)
+           2.  
       - [Infraction Service](#infraction-service)
+        1.  [Dependencies](#dependencies)
+        2.  
+      - [Gateway Service](#gateway-service)
+        1.  [Dependencies](#dependencies)
+      - [Eureka Discovery](#eureka-discovery)
+        1.  [Dependencies](#dependencies)
+
 6.  [FrontEnd](#frontend)
 7.  
 
@@ -60,4 +69,31 @@
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
-
+####    Immatriculation Service
+#####   1.  Dependencies
+-   Spring Web
+-   Spring Data JPA
+-   MySQL Driver
+-   Rest Repositories
+-   Lombok
+-   Spring Boot DevTools 
+-   Eureka Discovery Client
+-   Spring Boot Actuator
+####    Infraction Service
+#####   1.  Dependencies
+-   Spring Web
+-   Spring Data JPA
+-   MySQL Driver
+-   Rest Repositories
+-   Lombok
+-   Spring Boot DevTools 
+-   Eureka Discovery Client
+-   Spring Boot Actuator
+####    Gateway Service
+#####   1.  Dependencies
+-   Gateway
+-   Spring Boot Actuator
+-   Eureka Discovery Client
+####    Eureka Discovery
+#####   1.  Dependencies
+-   Eureka Server
