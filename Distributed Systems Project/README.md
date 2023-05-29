@@ -8,19 +8,19 @@
 5.  [BackEnd](#backend)
     - [Micro Services](#micro-services)
       - [Radar Service](#radar-service)
-        1. [Dependencies](#dependencies)
+        1. [Dependencies](#dependencies-radar)
         2. 
         
       - [Immatriculation Service](#immatriculation-service)
-           1.  [Dependencies](#dependencies)
+           1.  [Dependencies](#dependencies-immatriculation)
            2.  
       - [Infraction Service](#infraction-service)
-        1.  [Dependencies](#dependencies)
+        1.  [Dependencies](#dependencies-infraction)
         2.  
       - [Gateway Service](#gateway-service)
-        1.  [Dependencies](#dependencies)
+        1.  [Dependencies](#dependencies-gateway)
       - [Eureka Discovery](#eureka-discovery)
-        1.  [Dependencies](#dependencies)
+        1.  [Dependencies](#dependencies-eureka)
 
 6.  [FrontEnd](#frontend)
 7.  
