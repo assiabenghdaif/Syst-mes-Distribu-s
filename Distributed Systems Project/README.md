@@ -82,8 +82,8 @@
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 ####    Infraction Service
-<a name="dependencies-infraction"></a>
 #####   1.  Dependencies
+<a name="dependencies-infraction"></a>
 -   Spring Web
 -   Spring Data JPA
 -   MySQL Driver
