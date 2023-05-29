@@ -59,12 +59,17 @@ le navbar est compose de 3 liens (routerLink) Products, Customers et  Bill By ID
   - Customers:
   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/8272356f-d9db-4752-b941-8c86028c39c5)
 
-  - Bills: 
+  - Bills: on a 3 bills chaque bill a un customer et 1 ou plusieurs produits
+  
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/283d91c7-4df5-4822-8092-e31316347be5)
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/fa09d458-0def-44f0-9600-1b0d2da53cbe)
+
   
   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4f51073f-567d-4cfe-b2f2-73ed9f6de1e9)
 
-  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/929965b2-861b-4710-92af-d804a16d83c0)
-  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2171f6e8-8ec2-4dd9-b124-f1d8ba3362c0)
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/6797fe01-b85c-40e7-92c5-daf836fdb20c)
+  ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/3732d7ba-677b-4bae-9ceb-338aa41c28ba)
+
 
 
 
