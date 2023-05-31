@@ -7,15 +7,14 @@
 4.  [Class Diagram](#class-diagram)
 5.  [BackEnd](#backend)
     - [Micro Services](#micro-services)
-      - [Radar Service](#radar-service)
-        1. [Dependencies](#dependencies-radar)
-        2. 
-        
       - [Immatriculation Service](#immatriculation-service)
            1.  [Dependencies](#dependencies-immatriculation)
            2.  
       - [Infraction Service](#infraction-service)
         1.  [Dependencies](#dependencies-infraction)
+        2.  
+      - [Radar Service](#radar-service)
+        1.  [Dependencies](#dependencies-radar)
         2.  
       - [Gateway Service](#gateway-service)
         1.  [Dependencies](#dependencies-gateway)
@@ -59,17 +58,6 @@
     Class Diagram
 ##  5.  BackEnd
 ### Micro Services
-####    Radar Service
-<a name="dependencies-radar"></a>
-#####   1.  Dependencies
--   Spring Web
--   Spring Data JPA
--   MySQL Driver
--   Rest Repositories
--   Lombok
--   Spring Boot DevTools 
--   Eureka Discovery Client
--   Spring Boot Actuator
 ####    Immatriculation Service
 <a name="dependencies-immatriculation"></a>
 #####   1.  Dependencies
@@ -84,6 +72,17 @@
 ####    Infraction Service
 #####   1.  Dependencies
 <a name="dependencies-infraction"></a>
+-   Spring Web
+-   Spring Data JPA
+-   MySQL Driver
+-   Rest Repositories
+-   Lombok
+-   Spring Boot DevTools 
+-   Eureka Discovery Client
+-   Spring Boot Actuator
+####    Radar Service
+<a name="dependencies-radar"></a>
+#####   1.  Dependencies
 -   Spring Web
 -   Spring Data JPA
 -   MySQL Driver
