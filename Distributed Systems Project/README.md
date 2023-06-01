@@ -77,12 +77,60 @@
 <a name="imma-spring-data"></a>
 #####   2. Immatriculation Service Based on Spring data
 -   Owners:
+ 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/b5ceb795-921d-49f0-bb56-f19ea48e4eae)
 -   Vehicles:
+
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4114b26a-b7b8-4d94-9ee9-8fb568e8a476)
 
 <a name="imma-rest"></a>
 #####   3. Immatriculation Service Based on RESt
+-   Owners:
+    -   get All Owners
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/310fa49a-3aaf-4a65-8db5-5fd2392bc393)
+
+    -   get One Owner
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/596cdf80-fedf-40d0-9382-8d07d18ea12e)
+
+    -   Add Owner
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/44159ecd-2817-4ab4-977f-a55425f1d39e)
+
+    -   Edit Owner
+    
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/cefcc936-2a05-4863-9e91-d4d237226d89)
+
+    -   Delete Owner  to delete the owner you must delete all vehicles he has then you can delete the owner 
+    
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/c10ecead-ad6f-48ed-96bd-3434b4758d32)
+
+
+      
+-   Vehicles:
+    -   get All Vehicles
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/030e80e4-01fd-4a26-a8dc-4948fc2bf1a7)
+
+    -   get One Vehicle
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/65e7783f-09af-474d-bf72-277b8967211d)
+    -   Add Vehicle and Add it in the same time to the owner add before
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/75d321ab-8daf-40dc-85dd-1e565be33399)
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/47f324f1-5b79-44ae-9bcf-9cfbff7c37e1)
+
+
+    -   Edit Vehicle
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/e208bdb3-0508-49e8-8629-ed99e74e1596)   
+    
+    -   Delete Vehicle
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/035b1a13-27d4-4e69-bb71-72df81fba390)
+
+      
 
 <a name="imma-graphql"></a>
 #####   4. Immatriculation Service Based on GraphQL
