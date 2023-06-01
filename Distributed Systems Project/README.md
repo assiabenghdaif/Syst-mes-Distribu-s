@@ -84,7 +84,7 @@
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4114b26a-b7b8-4d94-9ee9-8fb568e8a476)
 
 <a name="imma-rest"></a>
-#####   3. Immatriculation Service Based on RESt
+#####   3. Immatriculation Service Based on RESt [*]
 -   Owners:
     -   get All Owners
     
@@ -133,7 +133,7 @@
       
 
 <a name="imma-graphql"></a>
-#####   4. Immatriculation Service Based on GraphQL
+#####   4. Immatriculation Service Based on GraphQL [**]
 -   Owners:
     -   get all Owners:
     ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/033d9cd1-49de-4940-8311-37ffca4abb63)
@@ -165,10 +165,10 @@
 
 
 <a name="imma-soap"></a>
-#####   5. Immatriculation Service Based on SOAP
+#####   5. Immatriculation Service Based on SOAP [***]
 
 <a name="imma-grpc"></a>
-#####   6. Immatriculation Service Based on GRPC
+#####   6. Immatriculation Service Based on GRPC [*]
 -   Owners:
     -   get all :
    
@@ -209,3 +209,8 @@
 <a name="dependencies-eureka"></a>
 #####   1.  Dependencies
 -   Eureka Server
+
+
+##### * tested with POSTMAN [https://www.postman.com/downloads/] (REST, GRPC)
+##### ** tested with the interface [http://localhost:1111/graphiql?path=/graphql] (GraphQl)
+##### *** tested with SoapUI [https://www.soapui.org/downloads/soapui/] (SOAP)
