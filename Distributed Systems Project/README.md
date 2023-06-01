@@ -9,10 +9,14 @@
     - [Micro Services](#micro-services)
       - [Immatriculation Service](#immatriculation-service)
            1.  [Dependencies](#dependencies-immatriculation)
-           2.  
+           2.  [Based on Spring data](#imma-spring-data)
+           3.  [Based on Rest](#imma-rest)
+           4.  [Based on GraphQl](#imma-graphql)
+           5.  [Based on SOAP](#imma-soap)
+           6.  [Based on GRPC](#imma-grpc)
       - [Infraction Service](#infraction-service)
         1.  [Dependencies](#dependencies-infraction)
-        2.  
+        2.  [Based on Spring data]()
       - [Radar Service](#radar-service)
         1.  [Dependencies](#dependencies-radar)
         2.  
@@ -69,6 +73,25 @@
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
+-   Spring for GraphQL
+<a name="imma-spring-data"></a>
+#####   2. Immatriculation Service Based on Spring data
+-   Owners:
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/b5ceb795-921d-49f0-bb56-f19ea48e4eae)
+-   Vehicles:
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4114b26a-b7b8-4d94-9ee9-8fb568e8a476)
+
+<a name="imma-rest"></a>
+#####   3. Immatriculation Service Based on RESt
+
+<a name="imma-graphql"></a>
+#####   4. Immatriculation Service Based on GraphQL
+
+<a name="imma-soap"></a>
+#####   5. Immatriculation Service Based on SOAP
+
+<a name="imma-grpc"></a>
+#####   6. Immatriculation Service Based on GRPC
 ####    Infraction Service
 #####   1.  Dependencies
 <a name="dependencies-infraction"></a>
@@ -80,6 +103,7 @@
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
+-   
 ####    Radar Service
 <a name="dependencies-radar"></a>
 #####   1.  Dependencies
