@@ -98,11 +98,11 @@
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/44159ecd-2817-4ab4-977f-a55425f1d39e)
 
-    -   Edit Owner
+-    -   Edit Owner
     
-   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/cefcc936-2a05-4863-9e91-d4d237226d89)
+     ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/cefcc936-2a05-4863-9e91-d4d237226d89)
 
-    -   Delete Owner  to delete the owner you must delete all vehicles he has then you can delete the owner 
+-    -   Delete Owner  to delete the owner you must delete all vehicles he has then you can delete the owner 
     
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/c10ecead-ad6f-48ed-96bd-3434b4758d32)
 
@@ -134,12 +134,48 @@
 
 <a name="imma-graphql"></a>
 #####   4. Immatriculation Service Based on GraphQL
+-   Owners:
+    -   get all Owners:
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/033d9cd1-49de-4940-8311-37ffca4abb63)
+
+    -   Add Owner:
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/5f3aa971-4ec9-452a-b965-70657ea04db9)
+
+    -   Update Owner :
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/841a0a68-7290-4a51-bd6f-c2409feee339)
+
+    -   delete Owner:
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7278a77f-d0d4-4bb7-8a2b-46b33955bf50)
+
+-   Vehicles:
+    -   Add Vehicle and affect it to the owner created before:
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4226be58-7fc4-41bd-a2f4-3b1c74a62b75)
+
+    -   Update Vehicle:
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/d6c29838-e2fa-4795-acdb-8f1f354a5e3c)
+
+    -   delete vehicle:
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/5a30b227-a707-4e3e-9c9d-03cada2eacaf)
+
 
 <a name="imma-soap"></a>
 #####   5. Immatriculation Service Based on SOAP
 
 <a name="imma-grpc"></a>
 #####   6. Immatriculation Service Based on GRPC
+-   Owners:
+    -   get all :
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/519892d4-c6eb-4e40-8e5e-7c4c2908177a)
+
+   -   
+-   Vehicles:
 ####    Infraction Service
 #####   1.  Dependencies
 <a name="dependencies-infraction"></a>
