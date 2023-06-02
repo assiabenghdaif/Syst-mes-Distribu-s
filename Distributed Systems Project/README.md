@@ -174,19 +174,19 @@
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/519892d4-c6eb-4e40-8e5e-7c4c2908177a)
 
-   -   get Owner by ID:
+    -   get Owner by ID:
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/32f34ca7-514b-446c-8450-a34770a5ca06)
 
-   -   add Owner :
+    -   add Owner :
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/6ad495a8-6ca5-42c9-b283-3e4cda4eec0e)
 
-   -   Update Owner :
+    -   Update Owner :
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/88d7e8d4-bd32-4056-bf44-6330a0a26ecd)
 
-   -   delete Owner :
+    -   delete Owner :
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/76140478-28cf-4fd5-9ec6-8a1b8e56776a)
 
