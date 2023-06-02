@@ -10,7 +10,7 @@ public class MyConfig {
     @Bean
     public SimpleJaxWsServiceExporter getJWS() {
         SimpleJaxWsServiceExporter exporter=new SimpleJaxWsServiceExporter();
-        exporter.setBaseAddress("http://localhost:1234/immatriculation-service/");
+        exporter.setBaseAddress("http://localhost:1234/immatriculation-service/soap");
         return exporter;
     }
 }

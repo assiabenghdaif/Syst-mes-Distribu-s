@@ -1,46 +1,28 @@
 package fsm.miaad.immatriculationservice.web.soap;
 
-
-import fsm.miaad.immatriculationservice.entities.Owner;
-import fsm.miaad.immatriculationservice.entities.Vehicle;
-import fsm.miaad.immatriculationservice.repositories.OwnerRepository;
-import fsm.miaad.immatriculationservice.repositories.VehicleRepository;
+import fsm.miaad.immatriculationservice.entities.*;
+import fsm.miaad.immatriculationservice.repositories.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Vector;
 
-//@Component
-//@WebService
+@Component
+@WebService
 public class SoapController {
-    public VehicleRepository vehicleRepository;
-    public OwnerRepository ownerRepository;
 
-    public SoapController(VehicleRepository vehicleRepository, OwnerRepository ownerRepository) {
-        this.vehicleRepository = vehicleRepository;
-        this.ownerRepository = ownerRepository;
-    }
-
-    /** Owner Services**/
+    @Autowired public VehicleRepository vehicleRepository;
+    @Autowired public OwnerRepository ownerRepository;
 
     @WebMethod
-    public Vector<Owner> allOwners(){
-        List<Owner> owners=ownerRepository.findAll();
-        Vector<Owner> owners1=new Vector<>();
-        for (Owner owner:owners) {
-            ArrayList<Vehicle> vehicles=new ArrayList<>();
-            for (Vehicle vehicle : owner.getVehicles()) {
-                vehicles.add(vehicle);
-            }
-            Owner owner1=new Owner(owner.getId(),owner.getFirstname(),owner.getLastname(),owner.getBirthDate(),owner.getEmail(),vehicles);
-
-            owners1.add(owner1);
-        }
-        return owners1;
+    public List<Owner> allOwners(){
+        return ownerRepository.findAll();
     }
 
     @WebMethod
@@ -53,7 +35,7 @@ public class SoapController {
         return ownerRepository.save((owner));
     }
 
-    @WebMethod
+   @WebMethod
     public Owner update_Owner(@WebParam Long id, @WebParam Owner owner) {
         Owner owner1=getById_Owner(id);
         if(owner1!=null){
@@ -106,5 +88,4 @@ public class SoapController {
     public void delete_Vehicle(@WebParam Long id) {
         vehicleRepository.deleteById(id);
     }
-    
 }
