@@ -102,7 +102,7 @@
     
      ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/cefcc936-2a05-4863-9e91-d4d237226d89)
 
--    -   Delete Owner  to delete the owner you must delete all vehicles he has then you can delete the owner 
+-    -   Delete Owner : if you have to delete the owner all his vehicles are deleted too (cascade = CascadeType.ALL) 
     
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/c10ecead-ad6f-48ed-96bd-3434b4758d32)
 
