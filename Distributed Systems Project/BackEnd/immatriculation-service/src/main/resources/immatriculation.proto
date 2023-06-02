@@ -1,0 +1,55 @@
+syntax = "proto3";
+option java_package="fsm.miaad.immatriculationservice.web.grpc.stubs";
+
+service ImmatriculationService{
+  // Owner operations
+  rpc allOwners(Empty) returns (OwnerList);
+  rpc oneOwner(OwnerId) returns (Owner);
+  rpc addOwner(Owner) returns (Owner);
+  rpc editOwner(Owner) returns (Owner);
+  rpc deleteOwner(OwnerId) returns (Empty);
+
+  // Vehicule operations
+  rpc allVehicules(Empty) returns (VehiculeList);
+  rpc oneVehicule(VehicleId) returns (Vehicule);
+  rpc addVehicule(Vehicule) returns (Vehicule);
+  rpc editVehicule(Vehicule) returns (Vehicule);
+  rpc deleteVehicule(VehicleId) returns (Empty);
+
+}
+
+message Empty{}
+
+message OwnerId{
+  int64 id=1;
+}
+
+message VehicleId{
+  int64 id=1;
+}
+
+message Owner {
+  int64 id = 1;
+  string firstname = 2;
+  string lastname = 3;
+  string birthDate = 4;
+  string email = 5;
+  VehiculeList vehicules = 6;
+}
+
+message Vehicule{
+  int64 id = 1;
+  string licensePlate = 2;
+  string brand = 3;
+  int32 fiscalPower = 4;
+  string model = 5;
+  Owner owner = 6;
+}
+
+message VehiculeList{
+  repeated Vehicule vehicules=1;
+}
+
+message OwnerList{
+    repeated Owner owners=1;
+}
