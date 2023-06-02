@@ -174,6 +174,14 @@
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/519892d4-c6eb-4e40-8e5e-7c4c2908177a)
 
+   -   get Owner by ID:
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/32f34ca7-514b-446c-8450-a34770a5ca06)
+
+   -   Update Owner :
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/88d7e8d4-bd32-4056-bf44-6330a0a26ecd)
+
    -   
 -   Vehicles:
     -   get all Vehicles:
