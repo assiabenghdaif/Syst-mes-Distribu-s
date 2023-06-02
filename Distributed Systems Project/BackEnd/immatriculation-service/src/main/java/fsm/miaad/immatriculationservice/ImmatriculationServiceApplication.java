@@ -18,7 +18,7 @@ public class ImmatriculationServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ImmatriculationServiceApplication.class, args);
-		System.out.println("SOAP Service is on port 1234");
+		System.out.println("SOAP Service is on port 1234;");
 		System.out.println("====================================================");
 	}
 
