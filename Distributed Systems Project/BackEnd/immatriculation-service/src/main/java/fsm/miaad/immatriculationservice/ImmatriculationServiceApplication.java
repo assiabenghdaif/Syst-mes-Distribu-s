@@ -1,9 +1,7 @@
 package fsm.miaad.immatriculationservice;
 
-import fsm.miaad.immatriculationservice.entities.Owner;
-import fsm.miaad.immatriculationservice.entities.Vehicle;
-import fsm.miaad.immatriculationservice.repositories.OwnerRepository;
-import fsm.miaad.immatriculationservice.repositories.VehicleRepository;
+import fsm.miaad.immatriculationservice.entities.*;
+import fsm.miaad.immatriculationservice.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +10,8 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Vector;
 
 @SpringBootApplication
 public class ImmatriculationServiceApplication {
@@ -25,7 +25,13 @@ public class ImmatriculationServiceApplication {
 	CommandLineRunner start(OwnerRepository ownerRepository, VehicleRepository vehicleRepository, RepositoryRestConfiguration repositoryRestConfiguration){
 		repositoryRestConfiguration.exposeIdsFor(Owner.class);
 		repositoryRestConfiguration.exposeIdsFor(Vehicle.class);
+
 		return args -> {
+			//  UserEntity(Long id, String login, String password, String firstname, String lastname, String profile, List<ContactEntity> contacts)
+//			Vector<UserEntity> userEntities=new Vector<>();
+
+
+
 			SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 			ArrayList<Vehicle> vehicles=new ArrayList<>();
 			Owner owner1=new Owner(null,"assia","benghdaif",dateFormat.parse("16/04/2001"),"assia@gmail.com",null);

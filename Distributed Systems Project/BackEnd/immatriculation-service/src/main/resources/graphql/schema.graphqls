@@ -2,7 +2,7 @@ type Query{
     allOwners : [Owner],
     oneOwner (id : String) : Owner,
     deleteOwner (id : String) : String,
-    allVehicles : [Owner],
+    allVehicles : [Vehicle],
     oneVehicle (id : String) : Vehicle,
     deleteVehicle (id : String) : String,
 
