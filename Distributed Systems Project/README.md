@@ -178,17 +178,35 @@
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/32f34ca7-514b-446c-8450-a34770a5ca06)
 
+   -   add Owner :
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/6ad495a8-6ca5-42c9-b283-3e4cda4eec0e)
+
    -   Update Owner :
    
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/88d7e8d4-bd32-4056-bf44-6330a0a26ecd)
 
-   -   
+   -   delete Owner :
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/76140478-28cf-4fd5-9ec6-8a1b8e56776a)
+
 -   Vehicles:
     -   get all Vehicles:
     
     ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2cd6838b-bdb6-4bde-957c-3b159c5cdd5d)
 
-    -   
+    -   add vehicle:
+    
+    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/44f3f19d-af24-44e0-97f3-3c49856a9d28)
+
+    -   update vehicle:
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/c271bb42-9a15-411e-90e4-de1774e10d8f)
+
+   -   delete VEhicle:
+   
+   ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7d245d7b-3b09-4572-942b-678aab61284e)
+
 ####    Infraction Service
 #####   1.  Dependencies
 <a name="dependencies-infraction"></a>
