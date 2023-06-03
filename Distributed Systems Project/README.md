@@ -262,6 +262,7 @@
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
+-   openfeign
 #####   2.  Dependencies
 ####    Gateway Service
 <a name="dependencies-gateway"></a>
