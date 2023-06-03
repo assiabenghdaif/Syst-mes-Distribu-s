@@ -33,7 +33,7 @@
 <a name="introduction"></a> 
 ## 1.   Introduction
 
-    We wish to create a distributed system based on microservices. This application should allow to manage and automate the process of offenses relating to vehicles following speeding detected by automatic radars. The system consists of three microservices:
+We wish to create a distributed system based on microservices. This application should allow to manage and automate the process of offenses relating to vehicles following speeding detected by automatic radars. The system consists of three microservices:
 
 •   The microservice [(RADAR-SERVICE)](#radar-service) that allows to manage radars. Each radar is defined by its id, its maximum speed, coordinates: Longitude and Latitude.
 
