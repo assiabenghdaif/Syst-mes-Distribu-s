@@ -30,7 +30,7 @@
 7.  
 
  
- 
+<a name="introduction"></a> 
 ## 1.   Introduction
 
     This is a web application built using Spring Boot and Angular.
@@ -38,7 +38,7 @@
     This application should allow for managing and automating the process of handling vehicle 
     offenses resulting from speed violations detected by automatic radars.
     
-    
+<a name="technologies-used"></a>     
 ## 2.   Technologies used
 
  - Spring Boot
@@ -47,14 +47,16 @@
  - Angular
  - Bootstrap
  - MySql DB
-    
+
+<a name="technical-architecture"></a> 
 ## 3.   Technical Architecture
 
     Introduction
     Technologies used
     Technical Architecture
     Class Diagram
-    
+
+<a name="class-diagram"></a> 
 ## 4.   Class Diagram
 
     Introduction
