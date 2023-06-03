@@ -10,21 +10,27 @@
     - [Micro Services](#micro-services)
       - [Immatriculation Service](#immatriculation-service)
            1.  [Dependencies](#dependencies-immatriculation)
-           2.  [Based on Spring data](#imma-spring-data)
-           3.  [Based on Rest](#imma-rest)
-           4.  [Based on GraphQl](#imma-graphql)
-           5.  [Based on SOAP](#imma-soap)
-           6.  [Based on GRPC](#imma-grpc)
+           2.  [Service Structure](#immatriculation-struct)
+           3.  [Based on Spring data](#imma-spring-data)
+           4.  [Based on Rest](#imma-rest)
+           5.  [Based on GraphQl](#imma-graphql)
+           6.  [Based on SOAP](#imma-soap)
+           7.  [Based on GRPC](#imma-grpc)
       - [Infraction Service](#infraction-service)
         1.  [Dependencies](#dependencies-infraction)
-        2.  [Based on Rest](#infraction-rest)
+        2.  [Service Structure](#infraction-struct)
+        3.  [Based on Rest](#infraction-rest)
       - [Radar Service](#radar-service)
         1.  [Dependencies](#dependencies-radar)
-        2.  
+        2.  [Service Structure](#radar-struct)
+        3.  [Based on Rest and Open Feign](#radar-rest)
       - [Gateway Service](#gateway-service)
         1.  [Dependencies](#dependencies-gateway)
+        2.  [Service Structure](#gateway-struct)
       - [Eureka Discovery](#eureka-discovery)
         1.  [Dependencies](#dependencies-eureka)
+        2.  [Service Structure](#eureka-struct)
+        3.  [Spring Eureka](#spring-eureka)
 
 6.  [FrontEnd](#frontend)
 7.  
@@ -71,6 +77,9 @@ In addition to the standard consultations and data changes operations, the syste
 ##  5.  BackEnd
 ### Micro Services
 ####    Immatriculation Service
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/066d0ddc-0970-418b-a0fc-4af7ac8eea50)
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/454ef2c9-c45f-46b6-bffa-1bdfda5a19c2)
+
 <a name="dependencies-immatriculation"></a>
 #####   1.  Dependencies
 -   Spring Web
@@ -82,8 +91,65 @@ In addition to the standard consultations and data changes operations, the syste
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 -   Spring for GraphQL
+
+<a name="immatriculation-struct"></a>
+#####   2. Service Structure
+
+    ├───src
+    │   ├───main
+    │   │   ├───java
+    │   │   │   └───fsm
+    │   │   │       └───miaad
+    │   │   │           └───immatriculationservice
+    │   │   │               │   ImmatriculationServiceApplication.java
+    |   |   |               |   MyConfig.java
+    │   │   │               │
+    │   │   │               ├───entites
+    │   │   │               │       Owner.java
+    │   │   │               │       Vehicle.java
+    │   │   │               │
+    │   │   │               ├───repositories
+    │   │   │               │       OwnerRepository.java
+    │   │   │               │       VehicleRepository.java
+    │   │   │               │
+    │   │   │               ├───services
+    │   │   │               │       OwnerService.java (Interface)
+    │   │   │               │       OwnerServiceImp.java
+    │   │   │               │       VehicleService.java (Interface)
+    │   │   │               │       VehicleServiceImp.java
+    │   │   │               │
+    │   │   │               └───web
+    │   │   │                   ├───graphql
+    │   │   │                   │       OwnerGraphQLController.java
+    │   │   │                   │       VehicleGraphQLController.java
+    │   │   │                   │
+    │   │   │                   ├───grpc
+    │   │   │                   │   |───server
+    │   │   │                   │   |       GRPCServerConfig.java
+    │   │   │                   │   |───services
+    │   │   │                   │   |       GRPCService.java
+    │   │   │                   │   └───stub
+    │   │   │                   │           Immatriculation.java
+    │   │   │                   │           ImmatriculationServiceGrpc.java
+    │   │   │                   │
+    │   │   │                   ├───rest
+    │   │   │                   │       OwnerRestController.java
+    │   │   │                   │       VehicleRestController.java
+    │   │   │                   │
+    │   │   │                   └───soap
+    │   │   │                           SoapController.java
+    │   │   │
+    │   │   └───resources
+    │   │       │   application.properties
+    │   │       │   immatriculation.proto
+    │   │       │
+    │   │       ├───graphql
+    │   │       │       schema.graphqls
+    │   │       │
+
+
 <a name="imma-spring-data"></a>
-#####   2. Immatriculation Service Based on Spring data
+#####   3. Immatriculation Service Based on Spring data
 -   Owners:
  
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/b5ceb795-921d-49f0-bb56-f19ea48e4eae)
@@ -222,6 +288,8 @@ In addition to the standard consultations and data changes operations, the syste
    ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7d245d7b-3b09-4572-942b-678aab61284e)
 
 ####    Infraction Service
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/1d757720-af4e-44e1-8632-ccc895885ac7)
+
 #####   1.  Dependencies
 <a name="dependencies-infraction"></a>
 -   Spring Web
@@ -233,8 +301,36 @@ In addition to the standard consultations and data changes operations, the syste
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 
+<a name="infraction-struct"></a>
+#####   2. Service Structure
+    ├───src
+    │   ├───main
+    │   │   ├───java
+    │   │   │   └───fsm
+    │   │   │       └───miaad
+    │   │   │           └───infractionservice
+    │   │   │               │   InfractionServiceApplication.java
+    │   │   │               │
+    │   │   │               ├───entites
+    │   │   │               │       Infraction.java
+    │   │   │               │
+    │   │   │               ├───repositories
+    │   │   │               │       InfractionRepository.java
+    │   │   │               │
+    │   │   │               ├───services
+    │   │   │               │       InfractionService.java (Interface)
+    │   │   │               │       InfractionServiceImp.java
+    │   │   │               │
+    │   │   │               └───web
+    │   │   │                   └───rest
+    │   │   │                           InfractionRestController.java
+    │   │   │
+    │   │   └───resources
+    │   │          application.properties
+    |   |
+
 <a name="infraction-rest "></a>
-#####   2.  Based on Rest [*]
+#####   3.  Based on Rest [*]
 -   All infraction:
 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/9a491bf7-2805-46e3-b050-4535e5387a1b)
@@ -257,6 +353,9 @@ In addition to the standard consultations and data changes operations, the syste
 
 
 ####    Radar Service
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/03914329-7363-4499-ad2b-0a990995af76)
+
 <a name="dependencies-radar"></a>
 #####   1.  Dependencies
 -   Spring Web
@@ -268,7 +367,45 @@ In addition to the standard consultations and data changes operations, the syste
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 -   openfeign
-#####   2.  Based on Rest and Open Feign [*]
+<a name="radar-struct"></a>
+#####   2.  Service Structure
+
+    ├───src
+    │   ├───main
+    │   │   ├───java
+    │   │   │   └───fsm
+    │   │   │       └───miaad
+    │   │   │           └───radarservice
+    │   │   │               │   RadarServiceApplication.java
+    │   │   │               │
+    │   │   │               ├───entites
+    │   │   │               │       Radar.java
+    │   │   │               │
+    │   │   │               ├───models
+    │   │   │               │       Infraction.java
+    │   │   │               │       Owner.java 
+    │   │   │               │       Vehicle.java 
+    │   │   │               |
+    │   │   │               ├───repositories
+    │   │   │               │       RadarRepository.java
+    │   │   │               │
+    │   │   │               ├───services
+    │   │   │               │       ImmatriculationRestClient.java (Interface)
+    │   │   │               │       InfractionRestClient.java (Interface)
+    │   │   │               │       RadarService.java (Interface)
+    │   │   │               │       RadarServiceImp.java
+    │   │   │               │
+    │   │   │               |───web
+    │   │   │               |       RadarRestController.java
+    │   │   │               |
+    │   │   │
+    │   │   └───resources
+    │   │       │   application.properties
+    │   │       │
+
+
+<a name="radar-rest"></a>
+#####   3.  Based on Rest and Open Feign [*]
 -   get all radars:
 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/3ae3a2c9-7d6a-4d97-83f8-2a983375731b)
@@ -289,19 +426,26 @@ In addition to the standard consultations and data changes operations, the syste
 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7fffc81a-1fdb-4190-9827-12e248d4eea4)
 
-
-
-#####   2.  Dependencies
 ####    Gateway Service
 <a name="dependencies-gateway"></a>
 #####   1.  Dependencies
 -   Gateway
 -   Spring Boot Actuator
 -   Eureka Discovery Client
+<a name="gateway-struct"></a>
+#####   2. Service Structure
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/ce74af65-3e2e-417e-9a51-6a104d9f272b)
+
 ####    Eureka Discovery
 <a name="dependencies-eureka"></a>
 #####   1.  Dependencies
 -   Eureka Server
+<a name="eureka-struct"></a>
+#####   2.  Service Structure
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/1bfb6c25-b983-4dd1-a9f2-87b33c3c643f)
+<a name="spring-eureka"></a>
+#####   3.  Spring Eureka  
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2265a1b2-5aba-414d-b6fd-fc3f7624674d)
 
 
 ##### * tested with POSTMAN [https://www.postman.com/downloads/] (REST, GRPC)
