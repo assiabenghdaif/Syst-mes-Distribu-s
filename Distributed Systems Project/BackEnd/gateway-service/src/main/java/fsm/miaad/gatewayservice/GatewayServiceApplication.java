@@ -18,16 +18,6 @@ public class GatewayServiceApplication {
 
     }
 
-//    @Bean
-    RouteLocator routeLocator(RouteLocatorBuilder builder){
-        return builder.routes()
-                .route((r)->r.path("/owners/**").uri("lb://IMMATRICULATION-SERVICE"))
-                .route((r)->r.path("/vehicles/**").uri("lb://IMMATRICULATION-SERVICE"))
-                .route((r)->r.path("/infractions/**").uri("lb://INFRACTION-SERVICE"))
-                .build();
-    }
-
-
     @Bean
     DiscoveryClientRouteDefinitionLocator definitionLocator(ReactiveDiscoveryClient client, DiscoveryLocatorProperties properties){
         return  new DiscoveryClientRouteDefinitionLocator(client,properties);
