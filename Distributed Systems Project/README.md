@@ -33,10 +33,15 @@
 <a name="introduction"></a> 
 ## 1.   Introduction
 
-    This is a web application built using Spring Boot and Angular.
-    We want to create a distributed system based on microservices. 
-    This application should allow for managing and automating the process of handling vehicle 
-    offenses resulting from speed violations detected by automatic radars.
+    We wish to create a distributed system based on microservices. This application should allow to manage and automate the process of offenses relating to vehicles following speeding detected by automatic radars. The system consists of three microservices:
+
+•   The microservice [(RADAR-SERVICE)](#radar-service) that allows to manage radars. Each radar is defined by its id, its maximum speed, coordinates: Longitude and Latitude.
+
+•   The registration microservice [(IMMATRICULATION-SERVICE)](#immatriculation-service) that allows to manage vehicles belonging to owners. Each vehicle belongs to only one owner. An owner is defined by his id, his name, his date of birth, his email and his email. A vehicle is defined by its id, its registration number, its brand, its tax horsepower and its model.
+
+•   The microservice [(INFRACTION-SERVICE)](#infraction-service) that allows to manage offenses. Each offense is defined by its id, its date, the number of the radar that detected the overspeeding, the registration number of the vehicle, the speed of the vehicle, the maximum speed of the radar and the amount of the offense.
+
+In addition to the standard consultations and data changes operations, the system must allow to post a speeding which will result in an offense. In addition, it must allow an owner to view their offenses.
     
 <a name="technologies-used"></a>     
 ## 2.   Technologies used
