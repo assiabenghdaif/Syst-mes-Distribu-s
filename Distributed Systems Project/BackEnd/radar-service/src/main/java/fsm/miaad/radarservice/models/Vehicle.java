@@ -1,4 +1,4 @@
-package fsm.miaad.models;
+package fsm.miaad.radarservice.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,10 +17,7 @@ public class Vehicle {
     private String brand;
     private int fiscalPower;
     private String model;
-    @ManyToOne
     private Owner owner;
-    @OneToMany(mappedBy = "vehicle")
-    private Collection<Offense> offenses;
 
 
 }

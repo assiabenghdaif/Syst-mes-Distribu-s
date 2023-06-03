@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: r1
+          uri: http://localhost:1111/
+          predicates:
+            - Path= /owners/**
+            - Path= /vehicles/**
+        - id: r2
+          uri: http://localhost:3333/
+          predicates:
+            - Path= /infractions/**
+

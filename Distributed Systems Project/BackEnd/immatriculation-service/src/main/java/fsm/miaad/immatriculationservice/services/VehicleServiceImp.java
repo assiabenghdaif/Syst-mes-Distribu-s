@@ -68,4 +68,9 @@ public class VehicleServiceImp implements VehicleService{
         return vehicles;
 
     }
+
+    @Override
+    public Vehicle getByLicensePlate(String licensePlate) {
+        return vehicleRepository.findByLicensePlate(licensePlate);
+    }
 }

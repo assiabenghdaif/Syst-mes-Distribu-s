@@ -1,6 +1,6 @@
-package fsm.miaad.entities;
+package fsm.miaad.radarservice.entities;
 
-import fsm.miaad.models.Offense;
+import fsm.miaad.radarservice.models.Infraction;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,5 +22,5 @@ public class Radar {
     private double latitude;
 //    @OneToMany(mappedBy = "radar")
     @Transient
-    private Collection<Offense> offenses;
+    private Collection<Infraction> infractions;
 }

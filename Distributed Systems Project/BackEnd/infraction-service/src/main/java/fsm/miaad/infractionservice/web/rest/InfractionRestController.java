@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("infraction-service/rest")
+//@RequestMapping("infraction-service/rest")
+@RequestMapping("/infractions")
 public class InfractionRestController {
     
     private InfractionServiceImp infractionService;
@@ -42,5 +43,10 @@ public class InfractionRestController {
     public ResponseEntity<HttpStatus> deleteInfraction(@PathVariable Long id){
         infractionService.delete_Infraction(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("findByRadarId/{radarId}")
+    public List<Infraction> findByRadarId(@PathVariable Long radarId){
+        return infractionService.findByRadarId(radarId);
     }
 }

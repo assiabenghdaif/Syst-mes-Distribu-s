@@ -13,4 +13,5 @@ public interface VehicleService {
     void delete_Vehicle(Long id);
     List<Vehicle> getVehicleByBrand(String brand);
 
+    Vehicle getByLicensePlate(String licensePlate);
 }

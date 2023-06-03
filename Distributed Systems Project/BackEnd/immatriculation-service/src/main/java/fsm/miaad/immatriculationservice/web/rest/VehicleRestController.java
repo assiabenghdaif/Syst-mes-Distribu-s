@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/immatriculation-service/vehicles/rest/")
+//@RequestMapping("/immatriculation-service/vehicles/rest/")
+@RequestMapping("/vehicles")
 public class VehicleRestController {
     private VehicleServiceImp vehicleService;
 
@@ -41,5 +42,10 @@ public class VehicleRestController {
     public ResponseEntity<HttpStatus> deleteVehicle(@PathVariable Long id){
         vehicleService.delete_Vehicle(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("VehicleByLicensePlate/{licensePlate}")
+    public Vehicle getByLicensePlate(@PathVariable String licensePlate) {
+        return vehicleService.getByLicensePlate(licensePlate);
     }
 }

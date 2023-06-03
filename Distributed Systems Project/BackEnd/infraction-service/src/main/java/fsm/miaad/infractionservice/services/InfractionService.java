@@ -10,4 +10,6 @@ public interface InfractionService {
     Infraction insert_Infraction(Infraction infraction);
     Infraction update_Infraction(Long id, Infraction infraction);
     void delete_Infraction(Long id);
+
+    List<Infraction> findByRadarId(Long radarId);
 }

@@ -51,4 +51,9 @@ public class InfractionServiceImp implements InfractionService{
         if(infraction!=null) infractionRepository.deleteById(infraction.getId());
 
     }
+
+    @Override
+    public List<Infraction> findByRadarId(Long radarId){
+        return infractionRepository.findByRadarId(radarId);
+    }
 }

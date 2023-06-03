@@ -1,5 +1,6 @@
-package fsm.miaad.models;
+package fsm.miaad.radarservice.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 
 @Data
@@ -21,6 +23,6 @@ public class Owner {
     private String lastname;
     private Date birthDate;
     private String email;
-    @OneToMany(mappedBy = "owner")
-    private Collection<Vehicle> vehicles;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private List<Vehicle> vehicles;
 }
