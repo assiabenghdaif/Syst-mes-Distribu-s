@@ -46,7 +46,7 @@
  - Eureka Descovery
  - Angular
  - Bootstrap
- - MySql DB
+ - H2 DB 
 
 <a name="technical-architecture"></a> 
 ## 3.   Technical Architecture
@@ -70,7 +70,7 @@
 #####   1.  Dependencies
 -   Spring Web
 -   Spring Data JPA
--   MySQL Driver
+-   H2 DB
 -   Rest Repositories
 -   Lombok
 -   Spring Boot DevTools 
@@ -221,7 +221,7 @@
 <a name="dependencies-infraction"></a>
 -   Spring Web
 -   Spring Data JPA
--   MySQL Driver
+-   H2 DB
 -   Rest Repositories
 -   Lombok
 -   Spring Boot DevTools 
@@ -256,13 +256,36 @@
 #####   1.  Dependencies
 -   Spring Web
 -   Spring Data JPA
--   MySQL Driver
+-   H2 DB
 -   Rest Repositories
 -   Lombok
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
 -   openfeign
+#####   2.  Based on Rest and Open Feign [*]
+-   get all radars:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/3ae3a2c9-7d6a-4d97-83f8-2a983375731b)
+
+-   add radar:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/a16e17c2-0763-47e5-be2d-6b3ac5308410)
+
+-   get one radar:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/efb8d9b6-5358-45e8-ab37-cf054db45b05)
+
+-   edit radar:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/179c746f-401b-4c91-abf0-f3659a8a09ac)
+
+-   delete radar :
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7fffc81a-1fdb-4190-9827-12e248d4eea4)
+
+
+
 #####   2.  Dependencies
 ####    Gateway Service
 <a name="dependencies-gateway"></a>
