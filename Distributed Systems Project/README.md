@@ -16,7 +16,7 @@
            6.  [Based on GRPC](#imma-grpc)
       - [Infraction Service](#infraction-service)
         1.  [Dependencies](#dependencies-infraction)
-        2.  [Based on Spring data]()
+        2.  [Based on Rest](#infraction-rest)
       - [Radar Service](#radar-service)
         1.  [Dependencies](#dependencies-radar)
         2.  
@@ -224,7 +224,30 @@
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
--   
+
+<a name="infraction-rest "></a>
+#####   2.  Based on Rest [*]
+-   All infraction:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/9a491bf7-2805-46e3-b050-4535e5387a1b)
+
+-   add infraction:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/ea748404-db9a-4c82-8524-631e892cb981)
+
+-   get one infraction by id:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4aae7e17-31af-457a-a12b-9b5815801946)
+
+-   edit infraction:
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/e1df6c3e-db61-4eb5-8283-78e99b47a580)
+
+-   delete infraction :
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/198f0212-7461-46d4-a446-8df40b2d2501)
+
+
 ####    Radar Service
 <a name="dependencies-radar"></a>
 #####   1.  Dependencies
@@ -236,6 +259,7 @@
 -   Spring Boot DevTools 
 -   Eureka Discovery Client
 -   Spring Boot Actuator
+#####   2.  Dependencies
 ####    Gateway Service
 <a name="dependencies-gateway"></a>
 #####   1.  Dependencies
