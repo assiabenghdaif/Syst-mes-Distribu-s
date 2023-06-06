@@ -1,0 +1,25 @@
+syntax = "proto3";
+option java_package="fsm.miaad.stubs";
+
+service SpeedingService{
+  //BiDirectional Streaming Model
+  rpc SpeedingRandomly(stream Request) returns (stream Response);
+}
+
+message Request{
+  int64 radarId = 1 ;
+  int64 vehicleId = 2 ;
+  double speed = 3 ;
+  double maxSpeed = 4 ;
+}
+
+//infraction
+message Response{
+  string vehiclelicensePlate = 1 ;
+  string ownerfirstname = 2 ;
+  string ownerlastname = 3 ;
+  double speed = 4 ;
+  double maxSpeed = 6 ;
+
+
+}
