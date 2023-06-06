@@ -1,4 +1,4 @@
-package fsm.miaad.radarservice.servicesfeign;
+package fsm.miaad.radarservice.services.feign;
 
 import fsm.miaad.radarservice.entities.Radar;
 import fsm.miaad.radarservice.models.Infraction;
@@ -6,7 +6,6 @@ import fsm.miaad.radarservice.models.Owner;
 import fsm.miaad.radarservice.models.Vehicle;
 import fsm.miaad.radarservice.repositories.RadarRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -119,4 +118,5 @@ public class RadarServiceImp implements RadarService{
         if (radar!=null) radarRepository.deleteById(id);
 
     }
+
 }

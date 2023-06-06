@@ -1,7 +1,5 @@
 package fsm.miaad.infractionservice.entities;
 
-import fsm.miaad.infractionservice.models.Radar;
-import fsm.miaad.infractionservice.models.Vehicle;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

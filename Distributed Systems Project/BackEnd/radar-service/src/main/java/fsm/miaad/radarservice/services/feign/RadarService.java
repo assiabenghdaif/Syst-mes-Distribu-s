@@ -1,4 +1,4 @@
-package fsm.miaad.radarservice.servicesfeign;
+package fsm.miaad.radarservice.services.feign;
 
 import fsm.miaad.radarservice.entities.Radar;
 
@@ -10,4 +10,6 @@ public interface RadarService {
     Radar addRadar(Radar radar);
     Radar editRadar(Long id,Radar radar);
     void deleteRadar(Long id);
+
+
 }

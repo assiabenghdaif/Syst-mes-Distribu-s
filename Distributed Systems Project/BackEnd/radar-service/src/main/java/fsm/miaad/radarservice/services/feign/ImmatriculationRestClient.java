@@ -1,4 +1,4 @@
-package fsm.miaad.radarservice.servicesfeign;
+package fsm.miaad.radarservice.services.feign;
 
 import fsm.miaad.radarservice.models.Owner;
 import fsm.miaad.radarservice.models.Vehicle;
@@ -22,6 +22,9 @@ public interface ImmatriculationRestClient {
 
     @GetMapping(_URLow+"allOwners")
     List<Owner> allOwners();
+
+    @GetMapping(_URLve+"oneVehicle/{id}")
+    Vehicle VehicleById(@PathVariable Long id);
 
 
 }

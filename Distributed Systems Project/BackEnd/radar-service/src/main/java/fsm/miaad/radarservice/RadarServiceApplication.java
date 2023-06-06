@@ -3,7 +3,7 @@ package fsm.miaad.radarservice;
 import fsm.miaad.radarservice.entities.Radar;
 import fsm.miaad.radarservice.models.Infraction;
 import fsm.miaad.radarservice.repositories.RadarRepository;
-import fsm.miaad.radarservice.servicesfeign.InfractionRestClient;
+import fsm.miaad.radarservice.services.feign.InfractionRestClient;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,7 +28,7 @@ public class RadarServiceApplication {
 		restConfiguration.exposeIdsFor(Radar.class);
 		Random random = new Random();
 		return args -> {
-			Radar radar=new Radar(null,120,random.nextDouble(),random.nextDouble(),null);
+			Radar radar=new Radar(1L,120,random.nextDouble(),random.nextDouble(),null);
 			radar=radarRepository.save(radar);
 			List<Infraction> infractions=infractionRestClient.allInfractions(radar.getId());
 			radar.setInfractions(infractions);

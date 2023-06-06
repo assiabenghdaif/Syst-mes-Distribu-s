@@ -1,7 +1,7 @@
 package fsm.miaad.radarservice.web;
 
 import fsm.miaad.radarservice.entities.Radar;
-import fsm.miaad.radarservice.servicesfeign.RadarServiceImp;
+import fsm.miaad.radarservice.services.feign.RadarServiceImp;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
