@@ -474,7 +474,7 @@ for example here the radar 4 it does not exist in the database it saved auto, an
 
 <a name="radar-grpc"></a>
 #####   3.  Based on GRPC
--   this the response from the GRPC server [radar-service](#radar-grpc-ser)  
+-   this is the response from the GRPC server [radar-service](#radar-grpc-ser)  
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/d7cd6c9c-026f-4080-8acd-da03ddb315e5)
 
 ####    Gateway Service
