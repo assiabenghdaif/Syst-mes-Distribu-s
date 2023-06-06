@@ -75,10 +75,8 @@ In addition to the standard consultations and data changes operations, the syste
 <a name="class-diagram"></a> 
 ## 4.   Class Diagram
 
-    Introduction
-    Technologies used
-    Technical Architecture
-    Class Diagram
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/e39e2941-cdab-4d01-a1a6-c26c99a91433)
+
 ##  5.  BackEnd
 ### Micro Services
 ####    Immatriculation Service
