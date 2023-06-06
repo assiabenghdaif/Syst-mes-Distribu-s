@@ -83,39 +83,6 @@ public class RadarGRPCService extends SpeedingServiceGrpc.SpeedingServiceImplBas
         };
     }
 
-    // @Override
-//    public void speedingRandomly(Radargrpc.Request request, StreamObserver<Radargrpc.Response> responseObserver) {
-//        double speed=request.getSpeed();
-//        double maxSpeed=request.getMaxSpeed();
-//        Long radarId=request.getRadarId();
-//        Long vehicleId=request.getVehicleId();
-//
-//
-//        double latitude = generateLatitude();
-//        double longitude = generateLongitude();
-//        Radar radar=new Radar(radarId,maxSpeed,longitude,latitude,null);
-//        radar=radarRepository.save(radar);
-//        Vehicle vehicle=immatriculationRestClient.VehicleById(vehicleId);
-//        //  Infraction(Long id, Date date, Long radarId, String vehicleLicensePlate, double vehicleSpeed, double maxSpeed, double amount, ...)   Infraction()
-//        Infraction infraction=new Infraction(null,new Date(),radar.getId(),vehicle.getLicensePlate(),speed,maxSpeed,500+(speed-maxSpeed)*10,vehicle);
-//        infraction=infractionRestClient.addInfraction(infraction);
-//        List<Infraction> infractions=new ArrayList<>();
-//        infractions.add(infraction);
-//        radar.setInfractions(infractions);
-//        radarRepository.save(radar);
-//        Radargrpc.Response response=Radargrpc.Response.newBuilder()
-//                .setSpeed(speed)
-//                .setMaxSpeed(maxSpeed)
-//                .setOwnerfirstname(vehicle.getOwner().getFirstname())
-//                .setOwnerlastname(vehicle.getOwner().getLastname())
-//                .setVehiclelicensePlate(vehicle.getLicensePlate())
-//                .build();
-//        responseObserver.onNext(response);
-//
-//    }
-
-    //    @Override
-
 
     private static double generateLatitude() {
         Random random = new Random();
