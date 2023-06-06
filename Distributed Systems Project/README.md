@@ -24,6 +24,11 @@
         1.  [Dependencies](#dependencies-radar)
         2.  [Service Structure](#radar-struct)
         3.  [Based on Rest and Open Feign](#radar-rest)
+        4.  [Based on GRPC](#radar-grpc-ser)
+      - [Radar GRPC Client](#radar-grpc)
+        1.  [Dependencies](#dependencies-radar-grpc)
+        2.  [Project Structure](#radar-grpc-struct)
+        3.  [Based on GRPC](#radar-grpc)
       - [Gateway Service](#gateway-service)
         1.  [Dependencies](#dependencies-gateway)
         2.  [Service Structure](#gateway-struct)
@@ -425,6 +430,43 @@ In addition to the standard consultations and data changes operations, the syste
 -   delete radar :
 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7fffc81a-1fdb-4190-9827-12e248d4eea4)
+
+<a name="radar-grpc-ser"></a>
+#####   3.  Based on GRPC
+
+####    Radar GRPC Client
+-   It's a maven project 
+
+<a name="dependencies-radar-grpc"></a>
+#####   1.  Dependencies
+-   GRPC stub
+-   GRPC protobuf
+-   .....
+
+<a name="radar-grpc-struct"></a>
+#####   2.  Project Structure
+
+    ├───src
+    │   ├───main
+    │   │   ├───java
+    │   │   │   └───fsm
+    │   │   │       └───miaad
+    │   │   │               ├───clients
+    │   │   │               │       RadarGRPCClient.java
+    │   │   │               │
+    │   │   │               └───stubs
+    │   │   │                       Radargrpc.java
+    │   │   │                       SpeedingServiceGrpc.java
+    │   │   │               
+    │   │   │
+    │   │   └───resources
+    │   │          radargrpc.proto
+    |   |
+
+<a name="radar-grpc"></a>
+#####   3.  Based on GRPC
+-   this the response from the GRPC server [radar-service](#radar-grpc-ser)  
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/d7cd6c9c-026f-4080-8acd-da03ddb315e5)
 
 ####    Gateway Service
 <a name="dependencies-gateway"></a>
