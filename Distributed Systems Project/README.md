@@ -24,6 +24,11 @@
         1.  [Dependencies](#dependencies-radar)
         2.  [Service Structure](#radar-struct)
         3.  [Based on Rest and Open Feign](#radar-rest)
+        4.  [Based on GRPC](#radar-grpc-ser)
+      - [Radar GRPC Client](#radar-grpc)
+        1.  [Dependencies](#dependencies-radar-grpc)
+        2.  [Project Structure](#radar-grpc-struct)
+        3.  [Based on GRPC](#radar-grpc)
       - [Gateway Service](#gateway-service)
         1.  [Dependencies](#dependencies-gateway)
         2.  [Service Structure](#gateway-struct)
@@ -425,6 +430,52 @@ In addition to the standard consultations and data changes operations, the syste
 -   delete radar :
 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/7fffc81a-1fdb-4190-9827-12e248d4eea4)
+
+<a name="radar-grpc-ser"></a>
+#####   3.  Based on GRPC
+it's a BiDirectional Streaming, where both sides (Client & Server) send a sequence of messages using a read-write stream. The two streams operate independently, so clients and servers can read and write in whatever order they like: for example, the server could wait to receive all the client messages before writing its responses, or it could alternately read a message then write a message, or some other combination of reads and writes. The order of messages in each stream is preserved.
+the principe here is the grpc Client send in a variable of time a rondomly speed of a vihecle and the max radar speed (it equal 10% of the speed), and the server save automaticly the radar if it doesn't exist in the database and the infraction.
+
+for example here the radar 4 it does not exist in the database it saved auto, and add all the infractions detected by the radar.
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/5b7b6c31-8a26-4404-94ad-6934423eae63)
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/4d14994f-1c78-4323-aeb7-8e0b2b7fcfef)
+
+
+####    Radar GRPC Client
+-   It's a maven project 
+
+<a name="dependencies-radar-grpc"></a>
+#####   1.  Dependencies
+-   GRPC stub
+-   GRPC protobuf
+-   .....
+
+<a name="radar-grpc-struct"></a>
+#####   2.  Project Structure
+
+    ├───src
+    │   ├───main
+    │   │   ├───java
+    │   │   │   └───fsm
+    │   │   │       └───miaad
+    │   │   │               ├───clients
+    │   │   │               │       RadarGRPCClient.java
+    │   │   │               │
+    │   │   │               └───stubs
+    │   │   │                       Radargrpc.java
+    │   │   │                       SpeedingServiceGrpc.java
+    │   │   │               
+    │   │   │
+    │   │   └───resources
+    │   │          radargrpc.proto
+    |   |
+
+<a name="radar-grpc"></a>
+#####   3.  Based on GRPC
+-   this is the response from the GRPC server [radar-service](#radar-grpc-ser)  
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/d7cd6c9c-026f-4080-8acd-da03ddb315e5)
 
 ####    Gateway Service
 <a name="dependencies-gateway"></a>
