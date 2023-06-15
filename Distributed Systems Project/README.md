@@ -38,6 +38,7 @@
         3.  [Spring Eureka](#spring-eureka)
 
 6.  [FrontEnd](#frontend)
+    
 7.  
 
  
@@ -493,6 +494,9 @@ the principe here is the grpc Client send in a variable of time a rondomly speed
 <a name="spring-eureka"></a>
 #####   3.  Spring Eureka  
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2265a1b2-5aba-414d-b6fd-fc3f7624674d)
+
+##    6.FrontEnd
+[screen-recording-1_pzeDMCYd.webm](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2b854b79-c977-4841-b30d-18df375ebc94)
 
 
 ##### * tested with POSTMAN [https://www.postman.com/downloads/] (REST, GRPC)
