@@ -39,6 +39,7 @@ public class RadarRestController {
 
     @DeleteMapping("deleteRadar/{id}")
     public ResponseEntity<HttpStatus> deleteRadar(@PathVariable Long id){
+
         radarService.deleteRadar(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -84,6 +84,70 @@ public class RadarGRPCService extends SpeedingServiceGrpc.SpeedingServiceImplBas
     }
 
 
+    @Override
+    public StreamObserver<Radargrpc.Empty> getRadarIDExist(StreamObserver<Radargrpc.Radars> responseObserver) {
+        return new StreamObserver<Radargrpc.Empty>() {
+
+
+            @Override
+            public void onNext(Radargrpc.Empty value) {
+                List<Radar> radarList=new ArrayList<>();
+                List<Radar> radars=radarRepository.findAll();
+
+                Radargrpc.Radars.Builder builder=Radargrpc.Radars.newBuilder();
+                for (Radar radar:radars){
+                    Radargrpc.Radar radarresponse=Radargrpc.Radar.newBuilder()
+                            .setRadarId(radar.getId())
+                            .setMaxSpeed(radar.getMaxSpeed())
+                            .build();
+                    builder.addRadar(radarresponse);
+                }
+                responseObserver.onNext(builder.build());
+
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onCompleted();
+            }
+        };
+    }
+
+    @Override
+    public StreamObserver<Radargrpc.Empty> getVehicleIDExist(StreamObserver<Radargrpc.Vehicles> responseObserver) {
+        return new StreamObserver<Radargrpc.Empty>() {
+            @Override
+            public void onNext(Radargrpc.Empty value) {
+                List<Vehicle> vehicleList=new ArrayList<>();
+                List<Vehicle> vehicles=immatriculationRestClient.allVehicles();
+
+                Radargrpc.Vehicles.Builder builder=Radargrpc.Vehicles.newBuilder();
+                for (Vehicle vehicle:vehicles){
+                    Radargrpc.Vehicle vehicleresponse=Radargrpc.Vehicle.newBuilder()
+                            .setVehicleId(vehicle.getId())
+                            .build();
+                    builder.addVehicle(vehicleresponse);
+                }
+                responseObserver.onNext(builder.build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+
+            }
+        };
+    }
+
     private static double generateLatitude() {
         Random random = new Random();
         return MIN_LATITUDE + (random.nextDouble() * (MAX_LATITUDE - MIN_LATITUDE));

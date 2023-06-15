@@ -115,6 +115,10 @@ public class RadarServiceImp implements RadarService{
     @Override
     public void deleteRadar(Long id) {
         Radar radar=oneRadar(id);
+        List<Infraction> infractions=infractionRestClient.allInfractions(id);
+        if(infractions!=null)
+            for (Infraction infraction:infractions)
+                infractionRestClient.deleteInfraction(infraction.getId());
         if (radar!=null) radarRepository.deleteById(id);
 
     }

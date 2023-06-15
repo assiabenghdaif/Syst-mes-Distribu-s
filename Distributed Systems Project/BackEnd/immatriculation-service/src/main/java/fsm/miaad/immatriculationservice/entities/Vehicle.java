@@ -24,6 +24,6 @@ public class Vehicle {
     private int fiscalPower;
     private String model;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Owner owner;
 }

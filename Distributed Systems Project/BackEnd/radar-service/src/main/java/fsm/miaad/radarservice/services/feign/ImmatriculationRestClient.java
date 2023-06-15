@@ -26,5 +26,8 @@ public interface ImmatriculationRestClient {
     @GetMapping(_URLve+"oneVehicle/{id}")
     Vehicle VehicleById(@PathVariable Long id);
 
+    @GetMapping(_URLve+"allVehicles")
+    List<Vehicle> allVehicles();
+
 
 }

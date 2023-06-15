@@ -4,6 +4,12 @@ option java_package="fsm.miaad.stubs";
 service SpeedingService{
   //BiDirectional Streaming Model
   rpc SpeedingRandomly(stream Request) returns (stream Response);
+
+  rpc GetRadarIDExist(stream Empty) returns (stream Radars);
+
+  rpc GetVehicleIDExist(stream Empty) returns (stream Vehicles);
+
+
 }
 
 message Request{
@@ -20,6 +26,24 @@ message Response{
   string ownerlastname = 3 ;
   double speed = 4 ;
   double maxSpeed = 6 ;
+}
 
+message  Empty{}
 
+message Radar{
+  int64 radarId = 1 ;
+  double maxSpeed =2;
+}
+
+message Radars{
+  repeated Radar radar=1;
+}
+
+message Vehicle{
+  int64 vehicleId=1;
+
+}
+
+message Vehicles{
+  repeated Vehicle vehicle=1;
 }

@@ -16,7 +16,7 @@ import java.util.Collection;
 @ToString
 public class Radar {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double maxSpeed;
     private double longitude;

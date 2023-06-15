@@ -30,6 +30,7 @@ public class VehicleRestController {
 
     @PostMapping("addVehicle")
     public Vehicle addVehicle(@RequestBody Vehicle vehicle){
+        System.out.println(vehicle.getOwner().getFirstname());
         return vehicleService.insert_Vehicle(vehicle);
     }
 

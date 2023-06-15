@@ -59,6 +59,70 @@ public final class SpeedingServiceGrpc {
      return getSpeedingRandomlyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty,
+      fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars> getGetRadarIDExistMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRadarIDExist",
+      requestType = fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty.class,
+      responseType = fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty,
+      fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars> getGetRadarIDExistMethod() {
+    io.grpc.MethodDescriptor<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty, fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars> getGetRadarIDExistMethod;
+    if ((getGetRadarIDExistMethod = SpeedingServiceGrpc.getGetRadarIDExistMethod) == null) {
+      synchronized (SpeedingServiceGrpc.class) {
+        if ((getGetRadarIDExistMethod = SpeedingServiceGrpc.getGetRadarIDExistMethod) == null) {
+          SpeedingServiceGrpc.getGetRadarIDExistMethod = getGetRadarIDExistMethod = 
+              io.grpc.MethodDescriptor.<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty, fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "SpeedingService", "GetRadarIDExist"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars.getDefaultInstance()))
+                  .setSchemaDescriptor(new SpeedingServiceMethodDescriptorSupplier("GetRadarIDExist"))
+                  .build();
+          }
+        }
+     }
+     return getGetRadarIDExistMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty,
+      fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles> getGetVehicleIDExistMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetVehicleIDExist",
+      requestType = fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty.class,
+      responseType = fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty,
+      fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles> getGetVehicleIDExistMethod() {
+    io.grpc.MethodDescriptor<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty, fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles> getGetVehicleIDExistMethod;
+    if ((getGetVehicleIDExistMethod = SpeedingServiceGrpc.getGetVehicleIDExistMethod) == null) {
+      synchronized (SpeedingServiceGrpc.class) {
+        if ((getGetVehicleIDExistMethod = SpeedingServiceGrpc.getGetVehicleIDExistMethod) == null) {
+          SpeedingServiceGrpc.getGetVehicleIDExistMethod = getGetVehicleIDExistMethod = 
+              io.grpc.MethodDescriptor.<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty, fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "SpeedingService", "GetVehicleIDExist"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles.getDefaultInstance()))
+                  .setSchemaDescriptor(new SpeedingServiceMethodDescriptorSupplier("GetVehicleIDExist"))
+                  .build();
+          }
+        }
+     }
+     return getGetVehicleIDExistMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -96,6 +160,20 @@ public final class SpeedingServiceGrpc {
       return asyncUnimplementedStreamingCall(getSpeedingRandomlyMethod(), responseObserver);
     }
 
+    /**
+     */
+    public io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty> getRadarIDExist(
+        io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetRadarIDExistMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty> getVehicleIDExist(
+        io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetVehicleIDExistMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -105,6 +183,20 @@ public final class SpeedingServiceGrpc {
                 fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Request,
                 fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Response>(
                   this, METHODID_SPEEDING_RANDOMLY)))
+          .addMethod(
+            getGetRadarIDExistMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty,
+                fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars>(
+                  this, METHODID_GET_RADAR_IDEXIST)))
+          .addMethod(
+            getGetVehicleIDExistMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty,
+                fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles>(
+                  this, METHODID_GET_VEHICLE_IDEXIST)))
           .build();
     }
   }
@@ -136,6 +228,22 @@ public final class SpeedingServiceGrpc {
         io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Response> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getSpeedingRandomlyMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty> getRadarIDExist(
+        io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getGetRadarIDExistMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Empty> getVehicleIDExist(
+        io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getGetVehicleIDExistMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -178,6 +286,8 @@ public final class SpeedingServiceGrpc {
   }
 
   private static final int METHODID_SPEEDING_RANDOMLY = 0;
+  private static final int METHODID_GET_RADAR_IDEXIST = 1;
+  private static final int METHODID_GET_VEHICLE_IDEXIST = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,6 +319,12 @@ public final class SpeedingServiceGrpc {
         case METHODID_SPEEDING_RANDOMLY:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.speedingRandomly(
               (io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Response>) responseObserver);
+        case METHODID_GET_RADAR_IDEXIST:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getRadarIDExist(
+              (io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Radars>) responseObserver);
+        case METHODID_GET_VEHICLE_IDEXIST:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getVehicleIDExist(
+              (io.grpc.stub.StreamObserver<fsm.miaad.radarservice.services.grpc.stubs.Radargrpc.Vehicles>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -261,6 +377,8 @@ public final class SpeedingServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SpeedingServiceFileDescriptorSupplier())
               .addMethod(getSpeedingRandomlyMethod())
+              .addMethod(getGetRadarIDExistMethod())
+              .addMethod(getGetVehicleIDExistMethod())
               .build();
         }
       }
