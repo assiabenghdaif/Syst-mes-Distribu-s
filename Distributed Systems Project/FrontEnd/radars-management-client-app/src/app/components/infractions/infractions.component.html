@@ -1,0 +1,197 @@
+<!-- MAIN -->
+<app-header></app-header>
+<br />
+<main>
+  <div class="head-title">
+    <div class="left">
+      <h1>Infractions</h1>
+
+    </div>
+    <button (click)="openFormPopup()"  class="btn-download">
+      <i  class='bx bxs-cloud-download fa fa-thin fa-plus' ></i>
+      <span  class="text">Add Infraction</span>
+    </button>
+  </div>
+
+  <div class="table-data" *ngIf="infractions">
+    <div class="order">
+      <div class="head">
+        <h3>Recent Infractions</h3>
+        <i class='bx bx-search' ></i>
+        <i class='bx bx-filter' ></i>
+      </div>
+      <table *ngIf="infractions">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Radar ID</th>
+          <th>Vehicle License Plate</th>
+          <th>Vehicle Speed</th>
+          <th>Max Speed</th>
+          <th>Amount</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let infraction of infractions">
+          <td>{{infraction.id}}</td>
+          <td>{{infraction.date}}</td>
+          <td>{{infraction.radarId}}</td>
+          <td>{{infraction.vehicleLicensePlate}}</td>
+          <td>{{infraction.vehicleSpeed}}</td>
+          <td>{{infraction.maxSpeed}}</td>
+          <td>{{infraction.amount}}</td>
+          <td>
+            <span (click)="deleteInfraction(infraction.id)" class="status delete"><fa-icon class='bx bxs-dashboard' class="status delete" [icon]="delete"></fa-icon></span>
+            <span (click)="openPopup(infraction)" class="status edit"><fa-icon class='bx bxs-dashboard' class="status edit" [icon]="edit"></fa-icon></span>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="popup card" *ngIf="isFormPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Add Infraction !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form (ngSubmit)="addInfraction()">
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="inputDate"> Date</label>
+                  <input type="date" [(ngModel)]="infractionAdd.date" [ngModelOptions]="{standalone: true}" class="form-control" id="inputDate" placeholder="Date">
+                </div>
+                <div class="col-sm-6">
+                  <label for="inputRadarId">RadarId</label>
+                  <select id="inputRadarId" class="form-select" [(ngModel)]="infractionAdd.radarId" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let rad of radars" [value]="rad.id">{{rad.id}}</option>
+                  </select>
+                </div>
+
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-4">
+                  <label for="inputvehicleLicensePlate">Vehicle License Plate</label>
+                  <select id="inputvehicleLicensePlate" class="form-select" [(ngModel)]="infractionAdd.vehicleLicensePlate" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let veh of vehicles" [value]="veh.licensePlate">{{veh.licensePlate}}</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label for="inputvehicleSpeed">Vehicle Speed</label>
+                  <input type="number" [(ngModel)]="infractionAdd.vehicleSpeed" [ngModelOptions]="{standalone: true}" min="0" step="0.01" class="form-control" id="inputvehicleSpeed" placeholder="Vehicle Speed" />
+
+                </div>
+                <div class="col-sm-4">
+                  <label for="inputmaxSpeed">Max Speed</label>
+                  <input type="number" [(ngModel)]="infractionAdd.maxSpeed" [ngModelOptions]="{standalone: true}" min="0" step="0.01" class="form-control" id="inputmaxSpeed" placeholder="Max Speed">
+                </div>
+
+              </div>
+              <br/>
+
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="inputamount">Amount</label>
+                  <input type="number" [(ngModel)]="infractionAdd.amount" [ngModelOptions]="{standalone: true}" min="0" step="0.01" class="form-control" id="inputamount" placeholder="Amount">
+                </div>
+
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="addInfraction()" type="button" class="btn btn-primary px-4 float-right">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-pop" (click)="closeFormPopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+
+  <div class="popup card" *ngIf="isPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Edit Infraction !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form (ngSubmit)="editInfraction(infractionAdd)">
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="updateDate"> Date</label>
+                  <input type="date" [(ngModel)]="infractionAdd.date" [ngModelOptions]="{standalone: true}" class="form-control" id="updateDate" placeholder="Date">
+                </div>
+                <div class="col-sm-6">
+                  <label for="updateRadarId">RadarId</label>
+                  <select id="updateRadarId" class="form-select" [(ngModel)]="infractionAdd.radarId" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let rad of radars" [value]="rad.id">{{rad.id}}</option>
+                  </select>
+                </div>
+
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-4">
+                  <label for="updatevehicleLicensePlate">Vehicle License Plate</label>
+                  <select id="updatevehicleLicensePlate" class="form-select" [(ngModel)]="infractionAdd.vehicleLicensePlate" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let veh of vehicles" [value]="veh.licensePlate">{{veh.licensePlate}}</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label for="updatevehicleSpeed">Vehicle Speed</label>
+                  <input type="number" [(ngModel)]="infractionAdd.vehicleSpeed" [ngModelOptions]="{standalone: true}" min="0" step="0.01" class="form-control" id="updatevehicleSpeed" placeholder="Vehicle Speed" />
+
+                </div>
+                <div class="col-sm-4">
+                  <label for="updatemaxSpeed">Max Speed</label>
+                  <input type="number" [(ngModel)]="infractionAdd.maxSpeed" [ngModelOptions]="{standalone: true}" min="0" step="0.01" class="form-control" id="updatemaxSpeed" placeholder="Max Speed">
+                </div>
+
+              </div>
+              <br/>
+
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="updateamount">Amount</label>
+                  <input type="number" [(ngModel)]="infractionAdd.amount" [ngModelOptions]="{standalone: true}" min="0" step="0.01" class="form-control" id="updateamount" placeholder="Amount">
+                </div>
+
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="editInfraction(infractionAdd)" type="button" class="btn btn-primary px-4 float-right">Edit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-poped" (click)="closePopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+</main>
+<!-- MAIN -->

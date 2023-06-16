@@ -1,0 +1,173 @@
+<!-- MAIN -->
+<app-header></app-header>
+<br />
+<main>
+
+  <div class="head-title">
+    <div class="left">
+      <h1>Vehicles</h1>
+
+    </div>
+    <button (click)="openFormPopup()"  class="btn-download">
+      <i  class='bx bxs-cloud-download fa fa-thin fa-plus' ></i>
+      <span  class="text">Add Vehicle</span>
+    </button>
+  </div>
+
+  <div class="table-data" *ngIf="vehicles">
+    <div class="order">
+      <div class="head">
+        <h3>Recent Vehicles</h3>
+        <i class='bx bx-search' ></i>
+        <i class='bx bx-filter' ></i>
+      </div>
+      <table *ngIf="vehicles">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>License Plate</th>
+          <th>Brand</th>
+          <th>Fiscal Power</th>
+          <th>Model</th>
+          <th>Owner</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+          <td>{{vehicle.id}}</td>
+          <td>{{vehicle.licensePlate}}</td>
+          <td>{{vehicle.brand}}</td>
+          <td>{{vehicle.fiscalPower}}</td>
+          <td>{{vehicle.model}}</td>
+          <td>{{vehicle.owner.firstname}} {{vehicle.owner.lastname}}</td>
+          <td>
+            <span (click)="deleteVehicle(vehicle.id)" class="status delete"><fa-icon  class='bx bxs-dashboard' class="status delete" [icon]="delete"></fa-icon></span>
+            <span (click)="openPopup(vehicle)" class="status edit"><fa-icon class='bx bxs-dashboard' class="status edit" [icon]="edit"></fa-icon></span>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="popup card" *ngIf="isFormPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Add Vehicle !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form >
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="inputLicensePlate">License Plate</label>
+                  <input type="text" [(ngModel)]="vehicleAdd.licensePlate" [ngModelOptions]="{standalone: true}" class="form-control" id="inputLicensePlate" placeholder="License Plate">
+                </div>
+
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-5">
+                  <label for="inputBrand">Brand</label>
+                  <input type="text" [(ngModel)]="vehicleAdd.brand" [ngModelOptions]="{standalone: true}" class="form-control" id="inputBrand" placeholder="Brand">
+                </div>
+                <div class="col-sm-4">
+                  <label for="inputModel">Model</label>
+                  <input type="text" [(ngModel)]="vehicleAdd.model" [ngModelOptions]="{standalone: true}" class="form-control" id="inputModel" placeholder="Model" />
+
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputFiscalPower" >Fiscal Power</label>
+                  <input type="number" [(ngModel)]="vehicleAdd.fiscalPower" [ngModelOptions]="{standalone: true}" class="form-control" id="inputFiscalPower" placeholder="FiscalPower">
+                </div>
+
+              </div>
+              <br/>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="inputOwner" class="form-label">Owner</label>
+                  <select id="inputOwner" class="form-select" [(ngModel)]="ownerId" [ngModelOptions]="{standalone: true}">
+
+                    <option *ngFor="let own of owners" [value]="own.id">{{own.firstname}} {{own.lastname}}</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="addVehicle()" type="button" class="btn btn-primary px-4 float-right">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-pop" (click)="closeFormPopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+
+  <div class="popup card" *ngIf="isPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Edit Vehicle !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="updateLicensePlate">License Plate</label>
+                  <input type="text" [(ngModel)]="vehicleAdd.licensePlate" [ngModelOptions]="{standalone: true}" class="form-control" id="updateLicensePlate" placeholder="License Plate">
+                </div>
+
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="updateBrand">Brand</label>
+                  <input type="text" [(ngModel)]="vehicleAdd.brand" [ngModelOptions]="{standalone: true}" class="form-control" id="updateBrand" placeholder="Brand">
+                </div>
+                <div class="col-sm-3">
+                  <label for="updateModel">Model</label>
+                  <input type="text" [(ngModel)]="vehicleAdd.model" [ngModelOptions]="{standalone: true}" class="form-control" id="updateModel" placeholder="Model" />
+
+                </div>
+                <div class="col-sm-3">
+                  <label for="updateFiscalPower">Fiscal Power</label>
+                  <input type="number" [(ngModel)]="vehicleAdd.fiscalPower" [ngModelOptions]="{standalone: true}" class="form-control" id="updateFiscalPower" placeholder="FiscalPower">
+                </div>
+
+              </div>
+
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="editVehicle(vehicleAdd)" type="button" class="btn btn-primary px-4 float-right">Edit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-poped" (click)="closePopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+</main>
+<!-- MAIN -->

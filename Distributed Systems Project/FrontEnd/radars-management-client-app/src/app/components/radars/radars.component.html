@@ -1,0 +1,147 @@
+<!-- MAIN -->
+<app-header></app-header>
+<br />
+<main>
+
+  <div class="head-title">
+    <div class="left">
+      <h1>Radars</h1>
+
+    </div>
+    <button (click)="openFormPopup()"  class="btn-download">
+      <i  class='bx bxs-cloud-download fa fa-thin fa-plus' ></i>
+      <span  class="text">Add Radar</span>
+    </button>
+  </div>
+
+  <div class="table-data" *ngIf="radars">
+    <div class="order">
+      <div class="head">
+        <h3>Recent Radars</h3>
+        <i class='bx bx-search' ></i>
+        <i class='bx bx-filter' ></i>
+      </div>
+      <table *ngIf="radars">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Max Speed</th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let radar of radars">
+          <td>{{radar.id}}</td>
+          <td>{{radar.maxSpeed}}</td>
+          <td>{{radar.longitude}}</td>
+          <td>{{radar.latitude}}</td>
+          <td>
+            <span (click)="deleteRadar(radar.id)" class="status delete"><fa-icon class='bx bxs-dashboard' class="status delete" [icon]="delete"></fa-icon></span>
+            <span (click)="openPopup(radar)" class="status edit"><fa-icon class='bx bxs-dashboard' class="status edit" [icon]="edit"></fa-icon></span>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="popup card" *ngIf="isFormPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Add Radar !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form (ngSubmit)="addRadar()">
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="inputmaxSpeed">Max Speed</label>
+                  <input type="text" [(ngModel)]="radarAdd.maxSpeed" [ngModelOptions]="{standalone: true}"  class="form-control" id="inputmaxSpeed" placeholder="Max Speed">
+                </div>
+
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="inputLongitude">Longitude</label>
+                  <input type="number"  [(ngModel)]="radarAdd.longitude" [ngModelOptions]="{standalone: true}"  min="0" step="0.01" class="form-control" id="inputLongitude" placeholder="Longitude">
+                </div>
+                <div class="col-sm-6">
+                  <label for="inputLatitude">Latitude</label>
+                  <input type="number"  [(ngModel)]="radarAdd.latitude" [ngModelOptions]="{standalone: true}"  min="0" step="0.01" class="form-control" id="inputLatitude" placeholder="Latitude" />
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="addRadar()" type="button" class="btn btn-primary px-4 float-right">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-pop" (click)="closeFormPopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+
+  <div class="popup card" *ngIf="isPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Edit Radar !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form (ngSubmit)="editRadar(radarAdd)">
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <label for="updatemaxSpeed">Max Speed</label>
+                  <input type="text" [(ngModel)]="radarAdd.maxSpeed" [ngModelOptions]="{standalone: true}"  class="form-control" id="updatemaxSpeed" placeholder="Max Speed">
+                </div>
+
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="updateLongitude">Longitude</label>
+                  <input type="number"  [(ngModel)]="radarAdd.longitude" [ngModelOptions]="{standalone: true}"  min="0" step="0.01" class="form-control" id="updateLongitude" placeholder="Longitude">
+                </div>
+                <div class="col-sm-6">
+                  <label for="updateLatitude">Latitude</label>
+                  <input type="number"  [(ngModel)]="radarAdd.latitude" [ngModelOptions]="{standalone: true}"  min="0" step="0.01" class="form-control" id="updateLatitude" placeholder="Latitude" />
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="editRadar(radarAdd)" type="button" class="btn btn-primary px-4 float-right">Edit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-poped" (click)="closePopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+</main>
+<!-- MAIN -->

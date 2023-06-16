@@ -1,0 +1,156 @@
+<!-- MAIN -->
+<app-header></app-header>
+<br />
+<main>
+  <div class="head-title">
+    <div class="left">
+      <h1>Owners</h1>
+
+    </div>
+    <button (click)="openFormPopup()"  class="btn-download">
+      <i  class='bx bxs-cloud-download fa fa-thin fa-plus' ></i>
+      <span  class="text">Add Owner</span>
+    </button>
+  </div>
+
+  <div class="table-data" *ngIf="owners">
+    <div class="order">
+      <div class="head">
+        <h3>Recent Owners</h3>
+        <i class='bx bx-search' ></i>
+        <i class='bx bx-filter' ></i>
+      </div>
+      <table *ngIf="owners">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Birth Date</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let owner of owners">
+          <td>
+            <p>{{owner.id}}</p>
+          </td>
+          <td>
+            <p>{{owner.firstname}} {{owner.lastname}}</p>
+          </td>
+          <td>{{owner.email}}</td>
+          <td>{{owner.birthDate}}</td>
+          <td>
+            <span (click)="deleteOwner(owner.id)" class="status delete"><fa-icon class='bx bxs-dashboard' class="status delete" [icon]="delete"></fa-icon></span>
+            <span (click)="openPopup(owner)" class="status edit"><fa-icon class='bx bxs-dashboard' class="status edit" [icon]="edit"></fa-icon></span>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="popup card" *ngIf="isFormPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Add Owner !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form (ngSubmit)="addOwner()">
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="inputFirstname">First name</label>
+                  <input type="text" [(ngModel)]="ownerAdd.firstname" [ngModelOptions]="{standalone: true}" class="form-control" id="inputFirstname" placeholder="First name">
+                </div>
+                <div class="col-sm-6">
+                  <label for="inputLastname">Last name</label>
+                  <input type="text" [(ngModel)]="ownerAdd.lastname" [ngModelOptions]="{standalone: true}" class="form-control" id="inputLastname" placeholder="Last name">
+                </div>
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="inputemail">Email</label>
+                  <input type="text" [(ngModel)]="ownerAdd.email" [ngModelOptions]="{standalone: true}" class="form-control" id="inputemail" placeholder="Email Address">
+                </div>
+                <div class="col-sm-6">
+                  <label for="inputbirth">	Birth Date</label>
+                  <input type="date" [(ngModel)]="ownerAdd.birthDate" [ngModelOptions]="{standalone: true}" class="form-control" id="inputbirth" placeholder="birth Date" />
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="addOwner()" type="button" class="btn btn-primary px-4 float-right">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-pop" (click)="closeFormPopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+
+
+  <div class="popup card" *ngIf="isPopupOpen">
+    <div class="card-body">
+      <h1 style="color: #3C91E6;">
+        Edit Owner !
+      </h1>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <form>
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="updateFirstname">First name</label>
+                  <input type="text" [(ngModel)]="ownerAdd.firstname" [ngModelOptions]="{standalone: true}" class="form-control" id="updateFirstname" placeholder="First name">
+                </div>
+                <div class="col-sm-6">
+                  <label for="updateLastname">Last name</label>
+                  <input type="text" [(ngModel)]="ownerAdd.lastname" [ngModelOptions]="{standalone: true}" class="form-control" id="updateLastname" placeholder="Last name">
+                </div>
+              </div>
+              <br />
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="updateemail">Email</label>
+                  <input type="text" [(ngModel)]="ownerAdd.email" [ngModelOptions]="{standalone: true}" class="form-control" id="updateemail" placeholder="Email Address">
+                </div>
+                <div class="col-sm-6">
+                  <label for="updatebirth">	birth Date</label>
+                  <input type="date" [(ngModel)]="ownerAdd.birthDate" [ngModelOptions]="{standalone: true}" class="form-control" id="updatebirth" placeholder="birth Date" />
+
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6 ">
+                  <br />
+
+                  <button (click)="editOwner(ownerAdd)" type="button" class="btn btn-primary px-4 float-right">Edit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <a id="close-poped" (click)="closePopup()"
+         class="box-close">
+        ×
+      </a>
+    </div>
+  </div>
+</main>
+<!-- MAIN -->
