@@ -1,6 +1,6 @@
 #   Under development... 🚀
-# [project](Contrôle Systèmes Distribués.pdf)
-[a relative link](Contrôle Systèmes Distribués.pdf)
+# [project](systemes_distribuees.pdf)
+[click to show project specification](systemes_distribuees.pdf)
 ## Table of content
 
 1.  [Introduction](#introduction) 
