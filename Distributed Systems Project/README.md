@@ -67,11 +67,8 @@ In addition to the standard consultations and data changes operations, the syste
 
 <a name="technical-architecture"></a> 
 ## 3.   Technical Architecture
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/73652758-5ed1-40c6-8317-3ef56aceee74)
 
-    Introduction
-    Technologies used
-    Technical Architecture
-    Class Diagram
 
 <a name="class-diagram"></a> 
 ## 4.   Class Diagram
