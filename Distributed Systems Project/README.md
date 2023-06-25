@@ -60,7 +60,7 @@ In addition to the standard consultations and data changes operations, the syste
 
  - Spring Boot
  - Spring Cloud (Gateway)
- - Eureka Descovery
+ - Eureka Discovery
  - Angular
  - Bootstrap
  - H2 DB 
