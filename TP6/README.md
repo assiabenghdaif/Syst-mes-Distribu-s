@@ -20,3 +20,10 @@
 
     - tester Kefka-console-producer et kafka-console-consumer
       ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2dd9606c-6590-41ae-aa0e-36fd26a6b778)
+#  2. Docker
+#  3. 
+En Utilisant KAFKA et Stpring Cloud Streams, Créer :
+Une application Web qui permet d'afficher les résultats du Stream Data Analytics en temps réel
+
+![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/27f6c351-045b-4136-816f-be4fed784c5e)
+
