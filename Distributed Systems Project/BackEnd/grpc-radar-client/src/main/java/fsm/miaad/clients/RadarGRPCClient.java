@@ -133,6 +133,6 @@ public class RadarGRPCClient {
                         .build();
                 streamObserver.onNext(request);
             }
-        }, 15000, 1000); //2 min //2 * 60 * 1000
+        }, 15000, 15000); //2 min //2 * 60 * 1000
     }
 }
