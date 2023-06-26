@@ -1,6 +1,7 @@
 #   Under development... 🚀
-# project
-# Table of content
+# [project](systemes_distribuees.pdf)
+[click to show project specification](systemes_distribuees.pdf)
+## Table of content
 
 1.  [Introduction](#introduction) 
 2.  [Technologies used](#technologies-used)
@@ -39,8 +40,7 @@
 
 6.  [FrontEnd](#frontend)
     
-7.  
-
+7.    [Webography](#webography)
  
 <a name="introduction"></a> 
 ## 1.   Introduction
@@ -53,14 +53,26 @@ We wish to create a distributed system based on microservices. This application 
 
 •   The microservice [(INFRACTION-SERVICE)](#infraction-service) that allows to manage offenses. Each offense is defined by its id, its date, the number of the radar that detected the overspeeding, the registration number of the vehicle, the speed of the vehicle, the maximum speed of the radar and the amount of the offense.
 
-In addition to the standard consultations and data changes operations, the system must allow to post a speeding which will result in an offense. In addition, it must allow an owner to view their offenses.
+•   In addition to the standard consultations and data changes operations, the system must allow to post a speeding which will result in an offense. In addition, it must allow an owner to view their offenses.
+
+##    repositories links :
+-    microcervices repositories :
+      -  ([immatriculation-service](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/BackEnd/immatriculation-service)) 
+      -  ([infraction-service](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/BackEnd/infraction-service))
+      -  ([radar-service](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/BackEnd/radar-service))
+      -  ([gateway-service](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/BackEnd/gateway-service))
+      -  ([eureka-discovery](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/BackEnd/eureka-discovery)) 
+      -  ([grpc-radar-client](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/BackEnd/grpc-radar-client))
+-    FrontEnd repository :
+      -    ([radar-managment-client-app](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/tree/3558bee2697eed5bce40bdb29473cab8f5bbe333/Distributed%20Systems%20Project/FrontEnd/radars-management-client-app))
+     
     
 <a name="technologies-used"></a>     
 ## 2.   Technologies used
 
  - Spring Boot
  - Spring Cloud (Gateway)
- - Eureka Descovery
+ - Eureka Discovery
  - Angular
  - Bootstrap
  - H2 DB 
@@ -75,6 +87,7 @@ In addition to the standard consultations and data changes operations, the syste
 
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/e39e2941-cdab-4d01-a1a6-c26c99a91433)
 
+<a name="backend"></a>
 ##  5.  BackEnd
 ### Micro Services
 ####    Immatriculation Service
@@ -330,7 +343,7 @@ In addition to the standard consultations and data changes operations, the syste
     │   │          application.properties
     |   |
 
-<a name="infraction-rest "></a>
+<a name="infraction-rest"></a>
 #####   3.  Based on Rest [*]
 -   All infraction:
 
@@ -492,10 +505,14 @@ the principe here is the grpc Client send in a variable of time a rondomly speed
 #####   3.  Spring Eureka  
 ![image](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2265a1b2-5aba-414d-b6fd-fc3f7624674d)
 
-##    6.FrontEnd
+<a name="frontend"></a>
+##    6.    FrontEnd
 [screen-recording-1_pzeDMCYd.webm](https://github.com/assiabenghdaif/Syst-mes-Distribu-s/assets/99361390/2b854b79-c977-4841-b30d-18df375ebc94)
 
 
+
+<a name="webography"></a>
+##    7.    Webography 
 ##### * tested with POSTMAN [https://www.postman.com/downloads/] (REST, GRPC)
 ##### ** tested with the interface [http://localhost:1111/graphiql?path=/graphql] (GraphQl)
 ##### *** tested with SoapUI [https://www.soapui.org/downloads/soapui/] (SOAP)
