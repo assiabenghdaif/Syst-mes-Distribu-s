@@ -1,4 +1,4 @@
-#   Under development... 🚀
+
 # [project](systemes_distribuees.pdf)
 [click to show project specification](systemes_distribuees.pdf)
 ## Table of content
